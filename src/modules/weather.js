@@ -1,3 +1,13 @@
+// Class for weather info
+class WeatherInfo {
+	constructor(location, unitType, temp, feelsLike) {
+		this.location = location;
+		this.unitType = unitType;
+		this.temp = temp;
+		this.feelsLike = feelsLike;
+	}
+}
+
 // Fetch weather data of location with API call
 async function getWeatherFromLocation(location, unitType) {
 	const locationName = fixCapitalization(location);
@@ -7,7 +17,11 @@ async function getWeatherFromLocation(location, unitType) {
 	const data = await fetch(url, { mode: 'cors' });
 	const dataJSON = await data.json();
 
-	console.log(`Temp: ${dataJSON.currentConditions.temp}`);
+	const name = dataJSON.resolvedAddress;
+	const temp = dataJSON.currentConditions.temp;
+	const feelsLike = dataJSON.currentConditions.feelslike;
+
+	return new WeatherInfo(name, unitType, temp, feelsLike);
 }
 
 // Fixes capitalization - move this into input module

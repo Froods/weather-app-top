@@ -1,4 +1,6 @@
 import './styles.css';
 import { getWeatherFromLocation } from './modules/weather';
 
-getWeatherFromLocation('Esbjerg', 'metric');
+getWeatherFromLocation('esbjerg', 'metric').then((weatherInfo) => {
+	console.log(weatherInfo);
+});
