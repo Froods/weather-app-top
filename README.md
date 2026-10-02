@@ -4,17 +4,17 @@ A small weather app built as part of [The Odin Project](https://www.theodinproje
 
 ## Features
 
-- Search for any location (city, address, postcode, etc.)
-- Shows the resolved location name, current temperature and "feels like" temperature
-- Loads weather for New York by default on page load
-- Uses metric units (°C)
+- Search for any location (city, address, postcode, etc.).
+- Shows the resolved location name, current temperature and "feels like" temperature.
+- Loads weather for New York by default on page load.
+- Uses metric units (°C).
 
 ## Tech stack
 
-- Vanilla JavaScript (ES modules, `async`/`await`, Fetch API)
-- HTML and CSS
-- [Webpack](https://webpack.js.org/) for bundling and the dev server
-- ESLint and Prettier for linting and formatting
+- Vanilla JavaScript (ES modules, `async`/`await`, Fetch API).
+- HTML and CSS.
+- [Webpack](https://webpack.js.org/) for bundling and the dev server.
+- ESLint and Prettier for linting and formatting.
 
 ## Project structure
 
